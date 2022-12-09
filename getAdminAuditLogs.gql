@@ -11,7 +11,7 @@ query getAdminAuditLogs {
         }]
     },
     where: {
-      query: "steve"
+      query: "james"
     }
   ) {
     edges {
