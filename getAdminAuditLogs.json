@@ -1,0 +1,44 @@
+query getAdminAuditLogs {
+  adminAuditLogs(
+  	pagination: {
+      after: "",
+      first: 10
+    },
+    orderBy: {
+      sortingFields: [{
+        fieldName: CREATED_AT,
+        order: ASC
+        }]
+    },
+    where: {
+      query: "steve"
+    }
+  ) {
+    edges {
+      node {
+        id
+        action
+        eventName
+    	    auditText
+        statusCode
+        highlight
+        createdAt
+      }
+      cursor
+    }
+    nodes {
+      id
+      action
+      eventName
+      auditText
+      statusCode
+      highlight
+      createdAt
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+    totalCount
+  }
+}
