@@ -1,0 +1,14 @@
+query tutorials {
+  tutorials(where: { apiId: "api_209c4806-f58b-4a75-9adf-3396325cd7ef", 
+    								 apiVersion:"apiversion_1b84770f-873b-429d-ac88-f919489908ac"
+  								 }
+            )   {
+    nodes {
+      id
+      slugifiedName
+      content
+      thumbnailURL
+      authorId
+    }
+  }
+} 
